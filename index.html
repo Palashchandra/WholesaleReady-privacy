@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Get WholesaleReady</title>
+  <meta name="description" content="Privacy Policy for the Get WholesaleReady Shopify wholesale pricing app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep:   #0a3d26;
+      --green-brand:  #1a6b45;
+      --green-mid:    #22875a;
+      --green-light:  #e6f4ed;
+      --green-pale:   #f2faf6;
+      --ink:          #0f1c15;
+      --body:         #374151;
+      --muted:        #6b7280;
+      --border:       #e5e7eb;
+      --white:        #ffffff;
+      --bg:           #f4f8f6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    .hero {
+      background: linear-gradient(145deg, var(--green-deep) 0%, var(--green-brand) 60%, var(--green-mid) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 64px 24px 80px;
+      text-align: center;
+    }
+
+    /* Decorative grid pattern */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    /* Decorative large monogram */
+    .hero::after {
+      content: 'WR';
+      position: absolute;
+      right: -30px;
+      bottom: -40px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 220px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -8px;
+    }
+
+    .hero-inner { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge svg { width: 13px; height: 13px; fill: currentColor; }
+
+    .hero h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .hero-sub .dot { width: 4px; height: 4px; background: rgba(255,255,255,0.4); border-radius: 50%; }
+
+    /* SVG wave */
+    .hero-wave {
+      display: block;
+      margin-top: -1px;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .hero-wave svg { display: block; width: 100%; }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── INTRO ── */
+    .intro-text {
+      font-size: 16px;
+      color: var(--body);
+      line-height: 1.8;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin: -28px 0 36px;
+      box-shadow: 0 4px 24px rgba(10,61,38,0.06);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 2px 12px rgba(10,61,38,0.05);
+    }
+
+    .toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-brand);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--green-light);
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px;
+    }
+
+    .toc-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      background: var(--green-pale);
+      border: 1px solid rgba(26,107,69,0.12);
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--green-deep);
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s, transform 0.12s;
+    }
+
+    .toc-chip:hover {
+      background: var(--green-light);
+      border-color: var(--green-brand);
+      transform: translateY(-1px);
+    }
+
+    .toc-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: var(--green-brand);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── SECTION CARDS ── */
+    .section-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(10,61,38,0.04);
+      scroll-margin-top: 24px;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 4px 20px rgba(10,61,38,0.08);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1.5px solid var(--green-pale);
+    }
+
+    .section-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--green-brand), var(--green-mid));
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .section-card h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .section-card p {
+      font-size: 15px;
+      color: var(--body);
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
+    .section-card p:last-child { margin-bottom: 0; }
+
+    /* Subheadings inside cards */
+    .sublabel {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-brand);
+      margin: 22px 0 10px;
+      padding-left: 10px;
+      border-left: 3px solid var(--green-brand);
+    }
+
+    /* Lists */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .check-list li {
+      font-size: 15px;
+      color: var(--body);
+      padding: 6px 0 6px 28px;
+      position: relative;
+      line-height: 1.65;
+      border-bottom: 1px solid var(--green-pale);
+    }
+
+    .check-list li:last-child { border-bottom: none; }
+
+    .check-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23e6f4ed'/%3E%3Cpath d='M4.5 8l2.5 2.5 4.5-4.5' stroke='%231a6b45' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* Callout */
+    .callout {
+      background: linear-gradient(135deg, var(--green-pale), #eaf6f1);
+      border: 1px solid rgba(26,107,69,0.18);
+      border-left: 4px solid var(--green-brand);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      font-size: 14.5px;
+      color: #1a4030;
+      margin: 18px 0 4px;
+      line-height: 1.65;
+    }
+
+    code {
+      background: var(--green-pale);
+      border: 1px solid rgba(26,107,69,0.15);
+      color: var(--green-deep);
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+    }
+
+    a { color: var(--green-brand); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-brand) 100%);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .contact-card-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-info p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .contact-info p:first-child {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .contact-info a {
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .contact-info a:hover { color: #fff; text-decoration: underline; }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+
+    .contact-btn:hover { background: rgba(255,255,255,0.25); text-decoration: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-deep);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-inner strong { color: rgba(255,255,255,0.7); }
+    .footer-inner .sep { color: rgba(255,255,255,0.2); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .section-card { padding: 24px 20px; }
+      .intro-text   { padding: 22px 20px; }
+      .hero         { padding: 48px 20px 68px; }
+      .toc          { padding: 20px; }
+      .toc-grid     { grid-template-columns: 1fr; }
+      .contact-card { padding: 24px 20px; }
+      .contact-card-inner { flex-direction: column; align-items: flex-start; }
+      .hero::after  { font-size: 140px; right: -20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .toc-chip { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1L2 3.5v4c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5v-4L8 1z"/>
+        </svg>
+        Get WholesaleReady
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="hero-sub">
+        <span>webexperts</span>
+        <span class="dot"></span>
+        <span>Last updated June 13, 2025</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Wave divider -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,48 L0,20 Q180,0 360,20 Q540,40 720,20 Q900,0 1080,20 Q1260,40 1440,20 L1440,48 Z" fill="#f4f8f6"/>
+    </svg>
+  </div>
+
+  <div class="container">
+
+    <!-- Intro floating card -->
+    <p class="intro-text">
+      Get WholesaleReady (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is a Shopify app that enables wholesale (B2B) pricing for Shopify merchants. This Privacy Policy explains what information we collect, how we use it, and your rights — when you install or use our app as a merchant, or when you interact with it as a wholesale customer on a merchant&rsquo;s store.
+    </p>
+
+    <!-- TOC -->
+    <div class="toc">
+      <p class="toc-label">Contents</p>
+      <div class="toc-grid">
+        <a class="toc-chip" href="#who">    <span class="toc-num">1</span> Who This Policy Covers</a>
+        <a class="toc-chip" href="#collect"><span class="toc-num">2</span> Information We Collect</a>
+        <a class="toc-chip" href="#use">    <span class="toc-num">3</span> How We Use Information</a>
+        <a class="toc-chip" href="#sharing"><span class="toc-num">4</span> Data Sharing</a>
+        <a class="toc-chip" href="#merchant"><span class="toc-num">5</span> Merchant Responsibilities</a>
+        <a class="toc-chip" href="#retention"><span class="toc-num">6</span> Data Retention</a>
+        <a class="toc-chip" href="#security"><span class="toc-num">7</span> Security</a>
+        <a class="toc-chip" href="#rights"><span class="toc-num">8</span> Your Rights</a>
+        <a class="toc-chip" href="#changes"><span class="toc-num">9</span> Changes to This Policy</a>
+        <a class="toc-chip" href="#contact"><span class="toc-num">10</span> Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section-card" id="who">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>Who This Policy Covers</h2>
+      </div>
+      <p>This policy applies to two groups of people who interact with Get WholesaleReady:</p>
+      <ul class="check-list">
+        <li><strong>Merchants</strong> — Shopify store owners who install Get WholesaleReady to offer wholesale pricing to their customers.</li>
+        <li><strong>Wholesale Customers</strong> — End customers (buyers) of a merchant&rsquo;s store who submit a wholesale application or use wholesale pricing features on the storefront.</li>
+      </ul>
+      <div class="callout">
+        Merchants act as the <strong>data controller</strong> for their customers&rsquo; data. Get WholesaleReady processes that data on behalf of the merchant as a <strong>data processor</strong>.
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card" id="collect">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>Information We Collect</h2>
+      </div>
+
+      <p class="sublabel">From Merchants (Store Owners)</p>
+      <ul class="check-list">
+        <li>Shopify store URL (myshopify.com domain) and store name</li>
+        <li>OAuth access tokens used to call the Shopify Admin API on your behalf</li>
+        <li>App configuration: wholesale group names, discount percentages, minimum order thresholds, loyalty discount settings, and ticker display preferences</li>
+        <li>Per-product pricing rules you configure in the app</li>
+      </ul>
+
+      <p class="sublabel">From Wholesale Customers (via the storefront registration form)</p>
+      <ul class="check-list">
+        <li>Full name and business name</li>
+        <li>Email address</li>
+        <li>Any additional details entered in the wholesale application form</li>
+        <li>Shopify customer ID (linked after the customer logs in post-approval)</li>
+        <li>Wholesale application status (pending / approved / rejected)</li>
+      </ul>
+
+      <p class="sublabel">Automatically Collected During Use</p>
+      <ul class="check-list">
+        <li>Cart contents (product IDs, variant IDs, quantities, prices) — used transiently to calculate pricing previews; not stored persistently</li>
+        <li>Customer tags and metafields written to the Shopify customer record to identify approved wholesale members</li>
+        <li>HMAC authentication tokens stored temporarily as cart attributes for secure checkout verification</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card" id="use">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>How We Use Information</h2>
+      </div>
+      <ul class="check-list">
+        <li>To authenticate merchants and operate the app within their Shopify store</li>
+        <li>To process wholesale applications and notify the merchant of new submissions</li>
+        <li>To apply wholesale pricing discounts automatically at checkout via Shopify Functions</li>
+        <li>To display discounted pricing in the cart drawer and on product pages for approved wholesale customers</li>
+        <li>To send transactional email notifications (e.g., application approval or rejection) on behalf of the merchant</li>
+        <li>To verify customer eligibility for wholesale discounts using cryptographic tokens</li>
+        <li>To sync discount configuration with Shopify&rsquo;s discount and metafield systems</li>
+      </ul>
+      <p>We do <strong>not</strong> use customer data for advertising, profiling, or any purpose beyond delivering the core app functionality described above.</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card" id="sharing">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>Data Sharing</h2>
+      </div>
+      <p>We do not sell, rent, or trade personal information. Data may be shared only in these limited circumstances:</p>
+      <ul class="check-list">
+        <li><strong>Shopify Inc.</strong> — We interact with Shopify&rsquo;s Admin API and Storefront API to apply tags, metafields, discount configurations, and automatic discounts on your store. All Shopify data handling is governed by <a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener noreferrer">Shopify&rsquo;s Privacy Policy</a>.</li>
+        <li><strong>Infrastructure providers</strong> — The app is hosted on servers in the EU (Hetzner). Data is stored and processed there. Hetzner&rsquo;s infrastructure is GDPR-compliant.</li>
+        <li><strong>Legal requirements</strong> — We may disclose information if required by law, court order, or governmental authority.</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section-card" id="merchant">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>Merchant Responsibilities</h2>
+      </div>
+      <p>As the data controller, merchants are responsible for:</p>
+      <ul class="check-list">
+        <li>Disclosing to their customers that a third-party wholesale app processes application and pricing data</li>
+        <li>Updating their own store&rsquo;s privacy policy to reflect the use of Get WholesaleReady</li>
+        <li>Handling customer data deletion requests — merchants may contact us to permanently remove a customer&rsquo;s wholesale application data from our database</li>
+        <li>Ensuring they have a lawful basis to collect the information entered into the wholesale registration form</li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section-card" id="retention">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>Data Retention</h2>
+      </div>
+      <ul class="check-list">
+        <li><strong>Merchant configuration data</strong> (groups, pricing rules, settings) is retained for as long as the app is installed and for up to 30 days after uninstallation.</li>
+        <li><strong>Wholesale application records</strong> (customer names, emails, business info) are retained for as long as the merchant&rsquo;s store remains active on the app, or until the merchant requests deletion.</li>
+        <li><strong>OAuth session tokens</strong> are stored for as long as needed to maintain an authenticated connection to the merchant&rsquo;s store.</li>
+        <li><strong>Cart pricing data</strong> is used transiently during a session and is not persisted to our database.</li>
+      </ul>
+      <p>
+        When a merchant uninstalls the app, Shopify sends an <code>app/uninstalled</code> webhook. We process this to delete the merchant&rsquo;s OAuth session and, on request, all associated data.
+      </p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section-card" id="security">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>Security</h2>
+      </div>
+      <p>We take reasonable technical and organizational measures to protect data, including:</p>
+      <ul class="check-list">
+        <li>All data in transit is encrypted using TLS (HTTPS)</li>
+        <li>Shopify OAuth tokens are stored server-side and never exposed to the browser</li>
+        <li>Storefront API routes are authenticated using Shopify&rsquo;s App Proxy signature verification and HMAC tokens</li>
+        <li>Server role and permission checks are always performed server-side — client-supplied values are never trusted for authorization decisions</li>
+      </ul>
+      <p>No method of electronic storage or transmission is 100% secure. If you discover a potential security vulnerability, please contact us immediately.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section-card" id="rights">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>Your Rights</h2>
+      </div>
+      <p>Depending on your location, you may have the right to:</p>
+      <ul class="check-list">
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+        <li><strong>Correct</strong> — request that inaccurate or incomplete data be updated</li>
+        <li><strong>Delete</strong> — request erasure of your data (&ldquo;right to be forgotten&rdquo;)</li>
+        <li><strong>Restrict</strong> — object to or limit certain processing activities</li>
+        <li><strong>Data portability</strong> — receive your data in a structured, machine-readable format</li>
+      </ul>
+      <p><strong>Wholesale customers</strong> should contact the merchant (store owner) whose store they applied to — the merchant is the data controller. If the merchant is unresponsive, you may contact us directly.</p>
+      <p><strong>Merchants</strong> may request full data deletion by uninstalling the app and emailing us at the address below.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section-card" id="changes">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the &ldquo;Last updated&rdquo; date at the top of this page. For significant changes, we will notify merchants via the app or by email. Continued use of the app after a policy update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <!-- Section 10 — Contact -->
+    <div class="section-card" id="contact">
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have questions about this Privacy Policy, want to exercise your data rights, or need to report a concern, please get in touch:</p>
+
+      <div class="contact-card">
+        <div class="contact-card-inner">
+          <div class="contact-info">
+            <p>Get WholesaleReady &mdash; by webexperts</p>
+            <p>Email: <a href="mailto:palashchandra.me@gmail.com">palashchandra.me@gmail.com</a></p>
+            <p>App: <a href="https://apps.shopify.com/get-wholesaleready" target="_blank" rel="noopener noreferrer">Shopify App Store listing</a></p>
+          </div>
+          <a href="mailto:palashchandra.me@gmail.com" class="contact-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Send Email
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <strong>Get WholesaleReady</strong>
+      <span class="sep">&middot;</span>
+      <span>webexperts</span>
+      <span class="sep">&middot;</span>
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> All rights reserved</span>
+    </div>
+  </footer>
+
+</body>
+</html>
